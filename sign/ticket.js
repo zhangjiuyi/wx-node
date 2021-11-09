@@ -21,6 +21,8 @@ const getToken = async function  () {
   }
 
   let { access_token } = await request.get(TOKEN_URL)
+  console.log('token',access_token)
+
   return token = access_token
 }
 
@@ -39,7 +41,8 @@ const getTicket = async function () {
   let url = `${TICKET_URL}access_token=${token}&type=jsapi`
 
   let res = await request.get(url)
-    
+  
+  console.log('ticket',res.ticket)
   return ticket = res.ticket
 }
 

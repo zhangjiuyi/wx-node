@@ -20,7 +20,6 @@ app.use(route.post('/wx', async (ctx, next) => {
     status: Object.keys(wxData).length >= 1 ? 'ok' : 'fail',
     data: wxData
   })
-
   ctx.body = data
 }))
 
